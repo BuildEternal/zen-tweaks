@@ -4,12 +4,12 @@
   "author": "BuildEternal",
   "name": "Zen Tweaks",
   "description": "A collection of minor UI tweaks aimed at subtly improving the Zen user experience.",
-  "version": "1.0",
+  "version": "1.0.0",
   "style": {
     "chrome": "style.css"
   },
   "readme": "https://raw.githubusercontent.com/BuildEternal/zen-tweaks/refs/heads/main/README.md",
-  "image": "",
-  "tags":[],
+  "image": "https://github.com/Comp-Tech-Guy/No-Gaps/blob/main/images/CompactMode.png?raw=true",
+  "tags": ["gaps"],
   "fork": ["zen"]
 }
