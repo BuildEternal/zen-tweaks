@@ -9,7 +9,6 @@
     "chrome": "style.css"
   },
   "readme": "https://raw.githubusercontent.com/BuildEternal/zen-tweaks/refs/heads/main/README.md",
-  "image": "https://github.com/Comp-Tech-Guy/No-Gaps/blob/main/images/CompactMode.png?raw=true",
-  "tags": ["gaps"],
-  "fork": ["zen"]
+  "image": "",
+  "tags": []
 }
