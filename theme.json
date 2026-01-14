@@ -8,5 +8,8 @@
   "style": {
     "chrome": "style.css"
   },
-  "readme": "https://raw.githubusercontent.com/BuildEternal/zen-tweaks/refs/heads/main/README.md"
+  "readme": "https://raw.githubusercontent.com/BuildEternal/zen-tweaks/refs/heads/main/README.md",
+  "image": "",
+  "tags":[],
+  "fork": ["zen"]
 }
