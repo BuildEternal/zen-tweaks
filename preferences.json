@@ -3,26 +3,25 @@
     "label": "Fix Misaligned Dragger in Split Mode",
     "property": "zen-tweaks.fix-split-mode-dragger",
     "type": "checkbox",
-    "default": true
+    "defaultValue": true
   },
   {
     "label": "Remove Gaps",
     "property": "zen-tweaks.remove-gaps",
     "type": "dropdown",
-    "value": "number",
-    "default": 0,
+    "defaultValue": "On",
     "options": [
       {
-        "label": "Always",
-        "value": 0
+        "label": "On",
+        "value": "on"
       },
       {
         "label": "Only in Compact Mode",
-        "value": 1
+        "value": "compact-mode-only"
       },
       {
-        "label": "Never",
-        "value": 2
+        "label": "Off",
+        "value": "off"
       }
     ]
   },
@@ -30,28 +29,24 @@
     "label": "Remove Tab Rounded Corners",
     "property": "zen-tweaks.remove-gaps.remove-tab-rounded-corners",
     "type": "checkbox",
-    "default": true,
-    "conditions": [{ "not": { "property": "zen-tweaks.remove-gaps", "value": 2 } }],
-    "margin": "0 0 0 2em"
+    "defaultValue": true
   },
   {
     "label": "Remove Dragger Gap in Split Mode",
     "property": "zen-tweaks.remove-gaps.remove-split-dragger-gap",
     "type": "checkbox",
-    "default": false,
-    "conditions": [{ "not": { "property": "zen-tweaks.remove-gaps", "value": 2 } }],
-    "margin": "0 0 0 2em"
+    "defaultValue": false
   },
   {
     "label": "Remove Tab Highlight in Split Mode",
     "property": "zen-tweaks.remove-tab-split-highlight",
     "type": "checkbox",
-    "default": true
+    "defaultValue": true
   },
   {
     "label": "Remove Tab Shadow",
     "property": "zen-tweaks.remove-tab-shadow",
     "type": "checkbox",
-    "default": false
+    "defaultValue": false
   }
 ]

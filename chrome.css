@@ -1,5 +1,5 @@
-/* Option: Remove Gaps > Always */
-@media (-moz-pref("zen-tweaks.remove-gaps", 0)) {
+/* Option: Remove Gaps > On */
+@media (-moz-pref("zen-tweaks.remove-gaps", "on")) {
   /* No-Gap Remove code */
   :root[zen-single-toolbar="true"] .browserSidebarContainer {
     border-top-left-radius: 0.1px !important;
@@ -101,7 +101,7 @@
 }
 
 /* Option: Remove Gaps > Only in Compact Mode */
-@media (-moz-pref("zen-tweaks.remove-gaps", 1)) {
+@media (-moz-pref("zen-tweaks.remove-gaps", "compact-mode-only")) {
   /* Remove height from the topbar in just singular toolbar */
 
   :root[zen-single-toolbar="true"][zen-compact-mode="true"]:not([customizing]) {
