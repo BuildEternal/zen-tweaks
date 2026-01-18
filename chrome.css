@@ -1,9 +1,3 @@
-/* debug test — should be very obvious */
-:root { --zen-primary-color: #ff00ff !important; }
-
-/* or even more forceful for testing (temporary) */
-* { outline: 3px dashed #ff00ff !important; }
-
 /* Option: Remove Gaps > Always */
 @media (-moz-pref("zen-tweaks.remove-gaps", 0)) {
   /* No-Gap Remove code */
