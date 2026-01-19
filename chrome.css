@@ -11,9 +11,7 @@
 }
 
 .browserSidebarContainer {
-  transition:
-    border-radius var(--zen-hidden-toolbar-transition),
-    margin var(--zen-hidden-toolbar-transition) !important;
+  transition: border-radius var(--zen-hidden-toolbar-transition) !important;
 }
 
 /* Option: Remove Gaps */
@@ -104,11 +102,6 @@
 
 @media (-moz-pref("zen-tweaks.remove-tab-shadow", true)) {
   .browserSidebarContainer {
-    box-shadow: none !important;
-  }
-
-  #tabbrowser-tabpanels[zen-split-view="true"]
-    .browserSidebarContainer.deck-selected {
     box-shadow: none !important;
   }
 }
