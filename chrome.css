@@ -97,9 +97,9 @@
   }
 }
 
-/* Option: Split Mode > Remove Dragger Gap */
+/* Option: Split Mode > Remove Tab Gaps */
 
-@media -moz-pref("zen-tweaks.split-mode.remove-dragger-gap") {
+@media -moz-pref("zen-tweaks.split-mode.remove-tab-gaps") {
   .browserSidebarContainer[is-zen-split="true"] {
     margin-right: 0 !important;
   }

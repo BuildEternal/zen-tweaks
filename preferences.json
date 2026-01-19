@@ -40,8 +40,8 @@
     "defaultValue": true
   },
   {
-    "label": "Split Mode: Remove Dragger Gap",
-    "property": "zen-tweaks.split-mode.remove-dragger-gap",
+    "label": "Split Mode: Remove Tab Gaps",
+    "property": "zen-tweaks.split-mode.remove-tab-gaps",
     "type": "checkbox",
     "defaultValue": false
   },
