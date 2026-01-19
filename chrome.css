@@ -11,15 +11,23 @@
 }
 
 .browserSidebarContainer {
-  transition: border-radius var(--zen-hidden-toolbar-transition) !important;
+  transition:
+    border-radius var(--zen-hidden-toolbar-transition),
+    margin var(--zen-hidden-toolbar-transition) !important;
 }
 
 /* Option: Remove Gaps */
 
 @media -moz-pref("zen-tweaks.remove-gaps", "always") or (-moz-pref("zen-tweaks.remove-gaps", "compact-mode-only") and -moz-pref("zen.view.compact.enable-at-startup")) {
-  .browserSidebarContainer {
-    border-radius: 0 !important;
+  /* Option: Remove Gaps > Corner Style */
+
+  @media -moz-pref("zen-tweaks.remove-gaps.corner-style", "flush") {
+    .browserSidebarContainer {
+      border-radius: 0 !important;
+    }
   }
+
+  /* Remove tab margins */
 
   #zen-tabbox-wrapper {
     margin: 0px !important;
@@ -85,6 +93,7 @@
 }
 
 /* Option: Remove Tab Highlight in Split Mode */
+
 @media (-moz-pref("zen-tweaks.remove-tab-split-highlight", true)) {
   .browserSidebarContainer[zen-split="true"] {
     outline: none !important;
@@ -92,6 +101,7 @@
 }
 
 /* Option: Remove Tab Shadow */
+
 @media (-moz-pref("zen-tweaks.remove-tab-shadow", true)) {
   .browserSidebarContainer {
     box-shadow: none !important;

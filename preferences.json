@@ -24,7 +24,7 @@
   },
   {
     "label": "Remove Gaps: Corner Style",
-    "property": "zen-tweaks.remove-gaps-style",
+    "property": "zen-tweaks.remove-gaps.corner-style",
     "type": "dropdown",
     "placeholder": "Round",
     "options": [
@@ -33,12 +33,6 @@
         "value": "flush"
       }
     ]
-  },
-  {
-    "label": "Remove Tab Rounded Corners (When Gaps are Removed)",
-    "property": "zen-tweaks.remove-gaps.remove-tab-rounded-corners",
-    "type": "checkbox",
-    "defaultValue": true
   },
   {
     "label": "Remove Dragger Gap in Split Mode",
