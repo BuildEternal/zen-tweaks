@@ -9,24 +9,33 @@
     "label": "Remove Gaps",
     "property": "zen-tweaks.remove-gaps",
     "type": "dropdown",
-    "defaultValue": "On",
+    "defaultValue": "always",
+    "placeholder": "Off",
     "options": [
       {
-        "label": "On",
-        "value": "on"
+        "label": "Always",
+        "value": "always"
       },
       {
         "label": "Only in Compact Mode",
         "value": "compact-mode-only"
-      },
-      {
-        "label": "Off",
-        "value": "off"
       }
     ]
   },
   {
-    "label": "Remove Tab Rounded Corners",
+    "label": "Remove Gaps: Corner Style",
+    "property": "zen-tweaks.remove-gaps-style",
+    "type": "dropdown",
+    "placeholder": "Round",
+    "options": [
+      {
+        "label": "Flush",
+        "value": "flush"
+      }
+    ]
+  },
+  {
+    "label": "Remove Tab Rounded Corners (When Gaps are Removed)",
     "property": "zen-tweaks.remove-gaps.remove-tab-rounded-corners",
     "type": "checkbox",
     "defaultValue": true
