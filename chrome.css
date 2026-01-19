@@ -1,51 +1,41 @@
-/* Option: Remove Gaps > On */
-@media (-moz-pref("zen-tweaks.remove-gaps", "on")) {
-  /* No-Gap Remove code */
-  :root[zen-single-toolbar="true"] .browserSidebarContainer {
-    border-top-left-radius: 0.1px !important;
-    border-top-right-radius: 0.1px !important;
-  }
+/* Transitions */
 
-  :root[zen-compact-mode="true"]:not([customizing]) .browserSidebarContainer {
-    border-top-left-radius: 0.1px !important;
-    border-top-right-radius: 0.1px !important;
-  }
+#zen-tabbox-wrapper {
+  transition: margin var(--zen-hidden-toolbar-transition) !important;
+}
 
-  :root[zen-right-side="true"]:not([zen-single-toolbar="true"])
-    .browserSidebarContainer {
-    border-top-left-radius: 0.1px !important;
-  }
+#zen-appcontent-navbar-wrapper {
+  transition:
+    height var(--zen-hidden-toolbar-transition),
+    min-height var(--zen-hidden-toolbar-transition) !important;
+}
 
-  :root:not([zen-right-side="true"]):not([zen-single-toolbar="true"])
-    .browserSidebarContainer {
-    border-top-right-radius: 0.1px !important;
-  }
+.browserSidebarContainer {
+  transition: border-radius var(--zen-hidden-toolbar-transition) !important;
+}
 
+/* Option: Remove Gaps > Always */
+
+@media -moz-pref("zen-tweaks.remove-gaps", "always") {
   .browserSidebarContainer {
-    border-bottom-left-radius: 0.1px !important;
-    border-bottom-right-radius: 0.1px !important;
+    border-radius: 0 !important;
   }
 
   #zen-tabbox-wrapper {
     margin: 0px !important;
   }
 
-  :root[zen-single-toolbar="true"] {
-    #zen-appcontent-navbar-wrapper {
-      min-height: 0.1px !important;
-      height: 0.1px !important;
-    }
+  #zen-appcontent-navbar-wrapper {
+    min-height: 0 !important;
+    height: 0 !important;
   }
+
+  /* Remove the topbar when the toolbar is hidden */
 
   @media -moz-pref("zen.view.compact.hide-toolbar") {
     :root[zen-compact-mode="true"]:not([zen-single-toolbar="true"]) {
-      #zen-appcontent-navbar-wrapper {
-        min-height: 0.1px !important;
-        height: 0.1px !important;
-      }
-
       #zen-appcontent-navbar-wrapper[zen-has-hover="true"],
-      #zen-appcontent-navbar-wrapper[has-popup-menu="true"] {
+      #zen-appcontent-navbar-wrapper[zen-compact-mode-active="true"] {
         height: var(--zen-toolbar-height-with-bookmarks) !important;
       }
 
@@ -63,123 +53,89 @@
   }
 
   /* Tab Edits for split tab view */
-  .browserSidebarContainer[zen-split="true"] {
-    margin: 0px !important;
+
+  .browserSidebarContainer[is-zen-split="true"] {
+    margin-right: 0 !important;
   }
 
-  :has(.browserSidebarContainer[zen-split="true"]) #zen-tabbox-wrapper {
-    margin-right: 9px !important;
+  #tabbrowser-tabpanels[zen-split-view="true"] {
+    margin-right: var(--zen-split-column-gap) !important;
   }
 
-  #tabbrowser-tabbox[zen-split-view="true"] #tabbrowser-tabpanels {
-    margin: 0px !important;
-    position: relative;
+  #zen-splitview-overlay {
+    margin-left: calc(var(--zen-split-column-gap) / 2);
+    margin-right: calc(var(--zen-split-column-gap) / 2);
   }
 
-  .deck-selected {
+  .browserSidebarContainer.deck-selected {
     z-index: 1 !important;
   }
 
   .browserSidebarContainer:not(.deck-selected) {
     z-index: 0 !important;
   }
-
-  .zen-split-view-splitter:hover {
-    background: var(--zen-primary-color) !important;
-    filter: brightness(0.5);
-  }
-
-  .zen-split-view-splitter[orient="vertical"] {
-    width: 5px !important;
-    margin-left: -3px !important;
-  }
-
-  .zen-split-view-splitter[orient="horizontal"] {
-    height: 5px !important;
-    margin-top: 3px !important;
-  }
 }
 
 /* Option: Remove Gaps > Only in Compact Mode */
-@media (-moz-pref("zen-tweaks.remove-gaps", "compact-mode-only")) {
-  /* Remove height from the topbar in just singular toolbar */
 
-  :root[zen-single-toolbar="true"][zen-compact-mode="true"]:not([customizing]) {
-    #zen-appcontent-navbar-wrapper {
-      min-height: 0.1px !important;
-      height: 0.1px !important;
-    }
-  }
-
-  :root[zen-compact-mode="true"]:not([customizing]) {
-    /* No-Gap Remove code */
+@media -moz-pref("zen-tweaks.remove-gaps", "compact-mode-only") {
+  :root[zen-compact-mode="true"] {
     .browserSidebarContainer {
-      border-radius: 0.1px !important;
+      border-radius: 0 !important;
     }
 
     #zen-tabbox-wrapper {
       margin: 0px !important;
     }
 
-    /* To remove the height from the topbar when the hide toolbar is true */
+    #zen-appcontent-navbar-wrapper {
+      min-height: 0 !important;
+      height: 0 !important;
+    }
+
+    /* Remove the topbar when the toolbar is hidden */
+
     @media -moz-pref("zen.view.compact.hide-toolbar") {
-      #zen-appcontent-navbar-wrapper {
-        min-height: 0.1px !important;
-        height: 0.1px !important;
-      }
+      :root[zen-compact-mode="true"]:not([zen-single-toolbar="true"]) {
+        #zen-appcontent-navbar-wrapper[zen-has-hover="true"],
+        #zen-appcontent-navbar-wrapper[zen-compact-mode-active="true"] {
+          height: var(--zen-toolbar-height-with-bookmarks) !important;
+        }
 
-      #zen-appcontent-navbar-wrapper[zen-has-hover="true"],
-      #zen-appcontent-navbar-wrapper[has-popup-menu="true"] {
-        height: var(--zen-toolbar-height-with-bookmarks) !important;
-      }
-
-      @media (not -moz-pref("zen.view.shift-down-site-on-hover")) and (not ((-moz-pref("zen.view.experimental-no-window-controls") or (not -moz-pref("zen.view.hide-window-controls"))) and (not -moz-pref("zen.view.use-single-toolbar")))) {
-        .browserSidebarContainer:is(.deck-selected, [zen-split="true"])
-          .browserContainer {
-          #tabbrowser-tabpanels[has-toolbar-hovered] & {
-            margin-top: calc(
-              -1 * var(--zen-toolbar-height-with-bookmarks)
-            ) !important;
+        @media (not -moz-pref("zen.view.shift-down-site-on-hover")) and (not ((-moz-pref("zen.view.experimental-no-window-controls") or (not -moz-pref("zen.view.hide-window-controls"))) and (not -moz-pref("zen.view.use-single-toolbar")))) {
+          .browserSidebarContainer:is(.deck-selected, [zen-split="true"])
+            .browserContainer {
+            #tabbrowser-tabpanels[has-toolbar-hovered] & {
+              margin-top: calc(
+                -1 * var(--zen-toolbar-height-with-bookmarks)
+              ) !important;
+            }
           }
         }
       }
     }
 
     /* Tab Edits for split tab view */
-    .browserSidebarContainer[zen-split="true"] {
-      margin: 0px !important;
+
+    .browserSidebarContainer[is-zen-split="true"] {
+      margin-right: 0 !important;
     }
 
-    :has(.browserSidebarContainer[zen-split="true"]) #zen-tabbox-wrapper {
-      margin-right: 9px !important;
+    #tabbrowser-tabpanels[zen-split-view="true"] {
+      margin-right: var(--zen-split-column-gap) !important;
     }
 
-    #tabbrowser-tabbox[zen-split-view="true"] #tabbrowser-tabpanels {
-      margin: 0px !important;
-      position: relative;
+    #zen-splitview-overlay {
+      margin-left: calc(var(--zen-split-column-gap) / 2);
+      margin-right: calc(var(--zen-split-column-gap) / 2);
     }
 
-    .deck-selected {
+    .browserSidebarContainer.deck-selected {
       z-index: 1 !important;
     }
 
     .browserSidebarContainer:not(.deck-selected) {
       z-index: 0 !important;
-    }
-
-    .zen-split-view-splitter:hover {
-      background: var(--zen-primary-color) !important;
-      filter: brightness(0.5);
-    }
-
-    .zen-split-view-splitter[orient="vertical"] {
-      width: 5px !important;
-      margin-left: -3px !important;
-    }
-
-    .zen-split-view-splitter[orient="horizontal"] {
-      height: 5px !important;
-      margin-top: 3px !important;
     }
   }
 }
