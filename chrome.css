@@ -16,10 +16,10 @@
 
 /* Option: Remove Gaps */
 
-@media -moz-pref("zen-tweaks.remove-gaps", "always") or (-moz-pref("zen-tweaks.remove-gaps", "compact-mode-only") and -moz-pref("zen.view.compact.enable-at-startup")) {
+@media -moz-pref("zen-tweaks.remove-edge-gaps", "always") or (-moz-pref("zen-tweaks.remove-edge-gaps", "compact-mode-only") and -moz-pref("zen.view.compact.enable-at-startup")) {
   /* Option: Remove Gaps > Corner Style */
 
-  @media -moz-pref("zen-tweaks.remove-gaps.corner-style", "flush") {
+  @media -moz-pref("zen-tweaks.remove-edge-gaps.corner-style", "flush") {
     .browserSidebarContainer {
       border-radius: 0 !important;
     }
@@ -65,9 +65,36 @@
       }
     }
   }
+}
 
-  /* Tab Edits for split tab view */
+/* Option: Remove Tab Shadow */
 
+@media (-moz-pref("zen-tweaks.remove-tab-shadow", true)) {
+  .browserSidebarContainer {
+    box-shadow: none !important;
+  }
+}
+
+/* Option: Split Mode > Fix Misaligned Dragger */
+
+@media -moz-pref("zen-tweaks.split-mode.fix-dragger") {
+  .zen-split-view-splitter[orient="vertical"] {
+    margin-left: calc(var(--zen-element-separation) * -1) !important;
+  }
+
+  .zen-split-view-splitter[orient="horizontal"] {
+    margin-top: var(--zen-element-separation) !important;
+  }
+
+  .zen-split-view-splitter[orient="vertical"]::before {
+    left: calc(50% - 1px) !important;
+    top: calc(50% - 25px) !important;
+  }
+}
+
+/* Option: Split Mode > Remove Dragger Gap */
+
+@media -moz-pref("zen-tweaks.split-mode.remove-dragger-gap") {
   .browserSidebarContainer[is-zen-split="true"] {
     margin-right: 0 !important;
   }
@@ -90,18 +117,10 @@
   }
 }
 
-/* Option: Remove Tab Highlight in Split Mode */
+/* Option: Split Mode > Remove Tab Highlight */
 
-@media (-moz-pref("zen-tweaks.remove-tab-split-highlight", true)) {
+@media (-moz-pref("zen-tweaks.split-mode.remove-tab-highlight", true)) {
   .browserSidebarContainer[zen-split="true"] {
     outline: none !important;
-  }
-}
-
-/* Option: Remove Tab Shadow */
-
-@media (-moz-pref("zen-tweaks.remove-tab-shadow", true)) {
-  .browserSidebarContainer {
-    box-shadow: none !important;
   }
 }
