@@ -82,13 +82,18 @@
     margin-left: calc(var(--zen-element-separation) * -1) !important;
   }
 
+  .zen-split-view-splitter[orient="vertical"]::before {
+    left: calc(50% - 1px) !important;
+    top: calc(50% - 25px) !important;
+  }
+
   .zen-split-view-splitter[orient="horizontal"] {
     margin-top: var(--zen-element-separation) !important;
   }
 
-  .zen-split-view-splitter[orient="vertical"]::before {
-    left: calc(50% - 1px) !important;
-    top: calc(50% - 25px) !important;
+  .zen-split-view-splitter[orient="horizontal"]::before {
+    left: calc(50% - 25px) !important;
+    top: calc(50% - 1px) !important;
   }
 }
 
