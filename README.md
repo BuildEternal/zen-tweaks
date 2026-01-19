@@ -31,11 +31,11 @@ This mod must be installed manually.
       "id": "zen-tweaks",
       "name": "Zen Tweaks",
       "description": "A collection of minor UI improvements to Zen.",
-      "homepage": "<https://github.com/BuildEternal/zen-tweaks>",
-      "style": "<https://raw.githubusercontent.com/BuildEternal/zen-tweaks/main/chrome.css>",
-      "readme": "<https://raw.githubusercontent.com/BuildEternal/zen-tweaks/main/README.md>",
+      "homepage": "https://github.com/BuildEternal/zen-tweaks",
+      "style": "https://raw.githubusercontent.com/BuildEternal/zen-tweaks/main/chrome.css",
+      "readme": "https://raw.githubusercontent.com/BuildEternal/zen-tweaks/main/README.md",
       "author": "BuildEternal",
-      "preferences": "<https://raw.githubusercontent.com/BuildEternal/zen-tweaks/main/preferences.json>"
+      "preferences": "https://raw.githubusercontent.com/BuildEternal/zen-tweaks/main/preferences.json"
     }
     ```
     >
