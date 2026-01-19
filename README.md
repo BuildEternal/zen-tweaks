@@ -13,20 +13,34 @@ A collection of minor UI tweaks aimed at subtly improving the Zen user experienc
 
 **Zen Tweaks** comes with the following configurable features:
 
-- Fix Misaligned Split Mode Dragger
-- Remove Gaps
-  - Remove Tab Rounded Corners
-  - Remove Dragger Gap in Split Mode
-- Remove Tab Highlight in Split Mode
+- Remove Edge Gaps
 - Remove Tab Shadow
+- Split Mode: Fix Misaligned Dragger
+- Split Mode: Remove Tab Gaps
+- Split Mode: Remove Tab Highlight
 
-## Installation via *Sine*
+## Manual Installation
 
-1. Download and install the *[Sine](https://github.com/CosmoCreeper/Sine)* mod manager.
-2. TODO
+This mod must be installed manually.
+
+1. Open `about:profiles` in Zen. Locate the *Root Directory* field and click *Show in Finder*.
+2. Locate the `zen-themes.json` file and open it in a text editor. Add the following JSON field.
+    >
+    ```json
+    "zen-tweaks": {
+      "id": "zen-tweaks",
+      "name": "Zen Tweaks",
+      "description": "A collection of minor UI improvements to Zen.",
+      "homepage": "<https://github.com/BuildEternal/zen-tweaks>",
+      "style": "<https://raw.githubusercontent.com/BuildEternal/zen-tweaks/main/chrome.css>",
+      "readme": "<https://raw.githubusercontent.com/BuildEternal/zen-tweaks/main/README.md>",
+      "author": "BuildEternal",
+      "preferences": "<https://raw.githubusercontent.com/BuildEternal/zen-tweaks/main/preferences.json>"
+    }
+    ```
+    >
+3. Go to Zen's settings and click on *Zen Mods*. Click *Check for Updates*.
 
 ## Credits
 
-- Created by [BuildEternal](https://github.com/BuildEternal).
-- Powered by [*Sine*](https://github.com/CosmoCreeper/Sine).
 - Forked from [No-Gaps](https://github.com/Comp-Tech-Guy/No-Gaps) by [CompTechGuy](https://github.com/Comp-Tech-Guy).
