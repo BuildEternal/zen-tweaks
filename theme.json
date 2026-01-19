@@ -5,7 +5,7 @@
     "description": "A collection of minor UI improvements to Zen.",
     "homepage": "https://github.com/BuildEternal/zen-tweaks",
     "style": "https://raw.githubusercontent.com/BuildEternal/zen-tweaks/main/chrome.css",
-    "readme": "",
+    "readme": "https://raw.githubusercontent.com/BuildEternal/zen-tweaks/main/README.md",
     "image": "",
     "author": "BuildEternal",
     "version": "1.0",
