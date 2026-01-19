@@ -1,4 +1,4 @@
-# Zen Tweaks
+# Zen Tweaks (v1.1)
 
 A collection of minor UI tweaks aimed at subtly improving the Zen user experience.
 
@@ -36,11 +36,29 @@ This mod must be installed manually.
       "style": "https://raw.githubusercontent.com/BuildEternal/zen-tweaks/main/chrome.css",
       "readme": "https://raw.githubusercontent.com/BuildEternal/zen-tweaks/main/README.md",
       "author": "BuildEternal",
+      "version": "1.1",
       "preferences": "https://raw.githubusercontent.com/BuildEternal/zen-tweaks/main/preferences.json"
     }
     ```
     >
 3. Go to Zen's settings and click on *Zen Mods*. Click *Check for Updates*.
+
+### Updating This Mod
+
+This mod must be updated manually.
+
+1. Open `about:profiles` in Zen. Locate the *Root Directory* field and click *Show in Finder*.
+2. Locate the `zen-themes.json` file and open it in a text editor. Update the version number to current.
+3. Navigate to `chrome/zen-themes/`. Once there, delete the `zen-tweaks` folder.
+4. Go to Zen's settings and click on *Zen Mods*. Click *Check for Updates*.
+
+### Uninstalling This Mod
+
+This mod must be uninstalled manually.
+
+1. Open `about:profiles` in Zen. Locate the *Root Directory* field and click *Show in Finder*.
+2. Locate the `zen-themes.json` file and open it in a text editor. Remove the JSON field corresponding to this mod.
+3. Navigate to `chrome/zen-themes/`. Once there, delete the `zen-tweaks` folder.
 
 ## Credits
 
