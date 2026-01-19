@@ -13,6 +13,7 @@ A collection of minor UI tweaks aimed at subtly improving the Zen user experienc
 
 **Zen Tweaks** comes with the following configurable features:
 
+- Compact Mode: Disable Sidebar Popup
 - Remove Edge Gaps
 - Remove Tab Shadow
 - Split Mode: Fix Misaligned Dragger
