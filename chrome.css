@@ -42,25 +42,24 @@
 
   /* Manage toolbar hover when compact mode is enabled and set to "Hide Toolbar" */
 
-  @media -moz-pref("zen.view.compact.hide-toolbar") {
-    :root[zen-compact-mode="true"] {
-      #zen-appcontent-navbar-wrapper {
-        min-height: 0 !important;
-        height: 0 !important;
-      }
-      #zen-appcontent-navbar-wrapper[zen-has-hover="true"],
-      #zen-appcontent-navbar-wrapper[zen-compact-mode-active="true"] {
-        height: var(--zen-toolbar-height-with-bookmarks) !important;
-      }
+  @media -moz-pref("zen.view.compact.enable-at-startup") and -moz-pref("zen.view.compact.hide-toolbar") {
+    #zen-appcontent-navbar-wrapper {
+      min-height: 0 !important;
+      height: 0 !important;
+    }
 
-      @media (not -moz-pref("zen.view.shift-down-site-on-hover")) and (not ((-moz-pref("zen.view.experimental-no-window-controls") or (not -moz-pref("zen.view.hide-window-controls"))) and (not -moz-pref("zen.view.use-single-toolbar")))) {
-        .browserSidebarContainer:is(.deck-selected, [zen-split="true"])
-          .browserContainer {
-          #tabbrowser-tabpanels[has-toolbar-hovered] & {
-            margin-top: calc(
-              -1 * var(--zen-toolbar-height-with-bookmarks)
-            ) !important;
-          }
+    #zen-appcontent-navbar-wrapper[zen-has-hover="true"],
+    #zen-appcontent-navbar-wrapper[zen-compact-mode-active="true"] {
+      height: var(--zen-toolbar-height-with-bookmarks) !important;
+    }
+
+    @media (not -moz-pref("zen.view.shift-down-site-on-hover")) and (not ((-moz-pref("zen.view.experimental-no-window-controls") or (not -moz-pref("zen.view.hide-window-controls"))) and (not -moz-pref("zen.view.use-single-toolbar")))) {
+      .browserSidebarContainer:is(.deck-selected, [zen-split="true"])
+        .browserContainer {
+        #tabbrowser-tabpanels[has-toolbar-hovered] & {
+          margin-top: calc(
+            -1 * var(--zen-toolbar-height-with-bookmarks)
+          ) !important;
         }
       }
     }
