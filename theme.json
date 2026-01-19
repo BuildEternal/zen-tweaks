@@ -1,14 +1,14 @@
 {
   "id": "zen-tweaks",
-  "homepage": "https://github.com/BuildEternal/zen-tweaks",
-  "author": "BuildEternal",
   "name": "Zen Tweaks",
-  "description": "A collection of minor UI tweaks aimed at subtly improving the Zen user experience.",
-  "version": "1.0.0",
-  "style": {
-    "chrome": "style.css"
-  },
-  "readme": "https://raw.githubusercontent.com/BuildEternal/zen-tweaks/refs/heads/main/README.md",
-  "image": "",
-  "tags": []
+  "description": "A collection of minor UI improvements to Zen.",
+  "homepage": "https://github.com/BuildEternal/zen-tweaks",
+  "style": "https://github.com/BuildEternal/zen-tweaks/raw/refs/heads/main/chrome.css",
+  "author": "BuildEternal",
+  "version": "1.0",
+  "tags": [],
+  "createdAt": "2026-01-18",
+  "updatedAt": "2026-01-18",
+  "preferences": "https://raw.githubusercontent.com/BuildEternal/zen-tweaks/refs/heads/main/preferences.json",
+  "enabled": true
 }
