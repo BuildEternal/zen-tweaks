@@ -25,15 +25,19 @@
     margin: 0px !important;
   }
 
-  #zen-appcontent-navbar-wrapper {
+  /* #zen-appcontent-navbar-wrapper {
     min-height: 0 !important;
     height: 0 !important;
-  }
+  } */
 
   /* Remove the topbar when the toolbar is hidden */
 
   @media -moz-pref("zen.view.compact.hide-toolbar") {
     :root[zen-compact-mode="true"]:not([zen-single-toolbar="true"]) {
+      #zen-appcontent-navbar-wrapper {
+        min-height: 0 !important;
+        height: 0 !important;
+      }
       #zen-appcontent-navbar-wrapper[zen-has-hover="true"],
       #zen-appcontent-navbar-wrapper[zen-compact-mode-active="true"] {
         height: var(--zen-toolbar-height-with-bookmarks) !important;
@@ -88,15 +92,20 @@
       margin: 0px !important;
     }
 
-    #zen-appcontent-navbar-wrapper {
+    /* #zen-appcontent-navbar-wrapper {
       min-height: 0 !important;
       height: 0 !important;
-    }
+    } */
 
     /* Remove the topbar when the toolbar is hidden */
 
     @media -moz-pref("zen.view.compact.hide-toolbar") {
       :root[zen-compact-mode="true"]:not([zen-single-toolbar="true"]) {
+        #zen-appcontent-navbar-wrapper {
+          min-height: 0 !important;
+          height: 0 !important;
+        }
+
         #zen-appcontent-navbar-wrapper[zen-has-hover="true"],
         #zen-appcontent-navbar-wrapper[zen-compact-mode-active="true"] {
           height: var(--zen-toolbar-height-with-bookmarks) !important;
