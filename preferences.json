@@ -1,5 +1,11 @@
 [
   {
+    "label": "Compact Mode: Disable Sidebar Popup",
+    "property": "zen-tweaks.compact-mode.disable-sidebar-popup",
+    "type": "checkbox",
+    "defaultValue": false
+  },
+  {
     "label": "Remove Edge Gaps",
     "property": "zen-tweaks.remove-edge-gaps",
     "type": "dropdown",

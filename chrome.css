@@ -14,6 +14,17 @@
   transition: border-radius var(--zen-hidden-toolbar-transition) !important;
 }
 
+/* Option: Compact Mode > Disable Sidebar Popup */
+
+@media -moz-pref("zen-tweaks.compact-mode.disable-sidebar-popup") and -moz-pref("zen.view.compact.enable-at-startup") {
+  #navigator-toolbox {
+    left: calc(
+      -1 * var(--actual-zen-sidebar-width) + var(--zen-element-separation) / 2 +
+        1px
+    ) !important;
+  }
+}
+
 /* Option: Remove Gaps */
 
 @media -moz-pref("zen-tweaks.remove-edge-gaps", "always") or (-moz-pref("zen-tweaks.remove-edge-gaps", "compact-mode-only") and -moz-pref("zen.view.compact.enable-at-startup")) {
