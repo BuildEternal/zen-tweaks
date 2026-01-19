@@ -25,12 +25,16 @@
     margin: 0px !important;
   }
 
-  #zen-appcontent-navbar-wrapper {
-    min-height: 0 !important;
-    height: 0 !important;
+  /* Hide toolbar when it is hidden */
+
+  @media -moz-pref("zen.view.use-single-toolbar") {
+    #zen-appcontent-navbar-wrapper {
+      min-height: 0 !important;
+      height: 0 !important;
+    }
   }
 
-  /* Remove the topbar when the toolbar is hidden */
+  /* Manage toolbar hover when compact mode is enabled and set to "Hide Toolbar" */
 
   @media -moz-pref("zen.view.compact.hide-toolbar") {
     :root[zen-compact-mode="true"] {
