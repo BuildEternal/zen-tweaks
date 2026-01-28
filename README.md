@@ -11,14 +11,15 @@ A collection of minor UI tweaks aimed at subtly improving the Zen user experienc
 
 ## Overview
 
-**Zen Tweaks** comes with the following configurable features:
+*Zen Tweaks* comes with a number of features that can toggled on or off. Below is a compact list of these features.
+More details can be found in the [**Features**](#features) section below.
 
-- Compact Mode: Disable Sidebar Popup
-- Remove Edge Gaps
-- Remove Tab Shadow
-- Split Mode: Fix Misaligned Dragger
-- Split Mode: Remove Tab Gaps
-- Split Mode: Remove Tab Highlight
+- ☑️ **Compact Mode: Disable Sidebar Popup**
+- ☑️ **Remove Edge Gaps**
+- ☑️ **Remove Tab Shadow**
+- ☑️ **Split Mode: Fix Misaligned Dragger**
+- ☑️ **Split Mode: Remove Tab Gaps**
+- ☑️ **Split Mode: Remove Tab Highlight**
 
 ## Manual Installation
 
@@ -59,6 +60,48 @@ This mod must be uninstalled manually.
 1. Open `about:profiles` in Zen. Locate the *Root Directory* field and click *Show in Finder*.
 2. Locate the `zen-themes.json` file and open it in a text editor. Remove the JSON field corresponding to this mod.
 3. Navigate to `chrome/zen-themes/`. Once there, delete the `zen-tweaks` folder.
+
+## Features
+
+Below is a detailed list of all features in *Zen Tweaks*. All features can be toggled on or off, and some features have
+additional settings. Most features are off by default.
+
+### ☑️ Compact Mode: Disable Sidebar Popup
+
+Prevents the sidebar from appearing on hover when it is hidden in compact mode. Note that this can make compact mode
+difficult to disable without the hotkey.
+
+*Can be toggled on or off.*
+
+### ☑️ Remove Edge Gaps
+
+Removes the gaps around the edge of the window for a cleaner look.
+
+*Can be set to **Always**, **Only in Compact Mode**, or **Off***
+
+### ☑️ Remove Tab Shadow
+
+Removes the shadow behind the tab window.
+
+*Can be toggled on or off.*
+
+### ☑️ Split Mode: Fix Misaligned Dragger
+
+Realigns the dragger in split mode to be centered, since it is misaligned by default.
+
+*Can be toggled on or off.*
+
+### ☑️ Split Mode: Remove Tab Gaps
+
+Removes the gaps between tab windows in split mode.
+
+*Can be toggled on or off.*
+
+### ☑️ Split Mode: Remove Tab Highlight
+
+Removes the highlight on the focused tab window in split mode.
+
+*Can be toggled on or off.*
 
 ## Credits
 
