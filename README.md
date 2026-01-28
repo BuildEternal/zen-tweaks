@@ -1,4 +1,4 @@
-# Zen Tweaks (v1.1)
+# Zen Tweaks
 
 A collection of minor UI tweaks aimed at subtly improving the Zen user experience.
 
@@ -37,7 +37,6 @@ This mod must be installed manually.
       "style": "https://raw.githubusercontent.com/BuildEternal/zen-tweaks/main/chrome.css",
       "readme": "https://raw.githubusercontent.com/BuildEternal/zen-tweaks/main/README.md",
       "author": "BuildEternal",
-      "version": "1.1",
       "preferences": "https://raw.githubusercontent.com/BuildEternal/zen-tweaks/main/preferences.json"
     }
     ```
